@@ -42,29 +42,23 @@ public class Main {
         ShoppingList list1=new ShoppingList("lista de compras",user1,newProductList1,newProductList2,UserList);
 
 
-        System.out.println("User's que partilham a lista");
+        System.out.println("User's que partilham a lista:\n");
         for (int i = 0;i<UserList.size();i++){
             System.out.println(UserList.get(i).getUsername());}
 //Nome das pessoas com quem a lista está a ser partilhada separado por \n
-        System.out.println("Produtos no carrinho");
+        System.out.println("\nProdutos no carrinho:\n");
         for(int i = 0;i<newProductList2.size();i++){
             System.out.println(newProductList2.get(i).getName());}
         System.out.println("Preco em euros dos produtos no carrinho: "+list1.GetTotalPriceOnCart());
 //Nº de produtos + total de preço dos produtos que se encontram no carrinho
-        System.out.println(("Produtos que estão ainda na lista:"));
+        System.out.println(("\nProdutos que estão ainda na lista:\n"));
         for (int i = 0;i<newProductList1.size();i++){
             System.out.println((newProductList1.get(i).getName())); }
-        System.out.println("Preco em euros total dos itens que ainda estao na lista de compras: "+list1.GetTotalPrice());
+        System.out.println("\nPreco em euros total dos itens que ainda estao na lista de compras: "+list1.GetTotalPrice());
 //Nº de produtos + total do preço dos produdos que estão ainda na lista
-        System.out.println("Percentagemde complete: ");
+        System.out.println("\nPercentagemde complete: \n");
         System.out.println(list1.GetPercentageCompleted());
 //Percentagem de complete
-        System.out.println("Categorias Carrinho compras");
-        for (int i = 0;i<newProductList2.size();i++){
-            System.out.println((newProductList2.get(i).getCategoryName())); }
-        System.out.println(("Nome dos produtos das categorias no carrinho"));
-        for (int i = 0;i<newProductList2.size();i++){
-            System.out.println((newProductList2.get(i).getName())); }
 //Imprimir as categorias que existem no carrinho e por categoria imprimir o nome dos produtos
     }
 }
