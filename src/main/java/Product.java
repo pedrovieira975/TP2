@@ -6,6 +6,7 @@ public class Product {
     private Category category;
     private float price;
     private String unitytype;
+    private float desconto= 20 ;
 
     public Product(){
 
@@ -15,13 +16,14 @@ public class Product {
         this.name=name;
     }
 
-    public Product(String name, String description, String picture, Category category,float price, String unitytype){
+    public Product(String name, String description, String picture, Category category,float price, String unitytype, float desconto){
         this.name=name;
         this.description=description;
         this.picture=picture;
         this.category=category;
         this.price=price;
         this.unitytype=unitytype;
+        this.desconto=desconto;
     }
 
     public String getName() {
@@ -56,6 +58,10 @@ public class Product {
         return unitytype;
     }
 
+    public float getDesconto() {
+        return desconto;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -78,5 +84,9 @@ public class Product {
 
     public void setUnitytype(String unitytype) {
         this.unitytype = unitytype;
+    }
+
+    public void setDesconto(float desconto) {
+        this.desconto = desconto;
     }
 }
